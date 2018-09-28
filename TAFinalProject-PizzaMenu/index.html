@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pizza Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css" />
+</head>
+<body>
+  <div class="container-fluid" id="outside-container"> <!-- container to hold all webpage content -->
+    <div class="row"> <!-- columns have to go under rows so I just put a placeholder row here -->
+      <div class="col-sm-3 border-right border-dark"> <!-- left hand column with information -->
+        <P>Hi there! We're your average mom and pop pizza place. Nothing special to see here. <br> In the interest of filling up space, I'm going to put in some random text here! <br><br><br>Lorem ipsum dolor sit amet, at cum dolor dolores, ut noster lucilius usu. Ne pro causae oblique aliquam, noluisse invenire ei nec. Pri tollit erroribus moderatius eu. Sea adhuc partem blandit et. Eam indoctum consetetur an, sea enim magna ceteros an, at perfecto deserunt nec.
+
+          Illud munere sed ut, ei fabellas vivendum quo. Per an clita sanctus recusabo, te nec mazim clita quaerendum. Et decore corpora assueverit mel, id quo solum altera voluptatum. His imperdiet expetendis ad. Liber tacimates et pro. Stet mollis intellegam cu sed, cu eripuit mediocrem definiebas pro, movet repudiandae sed no.
+          
+          Eam mazim prodesset definiebas ne, vocent lobortis te ius. Cibo volumus vis id, liber malorum admodum te pri. Ad dicit eripuit mediocritatem his, nec laudem definitiones cu. Eos et simul prodesset, usu porro offendit eu. In regione laoreet sea. Graece putant dolores pro at.
+        </P>
+        <div> <!-- contact us section -->
+          <p class="border border-info">call us at 888-888-8888 or reach us by email at donotcontact@nodomain.com</p>
+        </div>
+      </div>
+      <div class="col-9"><!-- main body area -->
+        <div class="row d-flex h-25 border-bottom border-dark"> <!-- whole top logo area -->
+          <div class="col d-flex align-items-center"> <!-- left hand div that holds logo -->
+            <div class="img-container m-4"> <!-- image container div -->
+              <img src="images/Logo.PNG" alt="logo" class="img-fluid"> <!-- logo image -->
+            </div>
+          </div>
+          <div class="col d-flex align-items-center"> <!-- right hand div for motto -->
+            <p class="d-block border primary mx-auto">Moderate Quality Is Our Only Guarantee!</p> <!-- motto -->
+          </div>
+        </div>
+        <div class="d-block" id='menuBlock'> <!--menu and submit button div-->          
+          <div class="row mt-4 mb-4"> <!-- selection menus row 1 -->
+            <div class="d-flex col-sm mx-auto border p-2"> <!-- size menu container-->
+              <form class="d-block mx-auto" id="sizeForm"> <!-- size form -->
+                <input type="radio" name="size" value='Personal' checked><span id="buttonName">Personal</span>  <br>
+                <input type="radio" name="size" value='Medium'> Medium <br>
+                <input type="radio" name="size" value='Large'> Large <br>
+                <input type="radio" name="size" value='Extra Large'> Extra Large <br>              
+              </form>
+            </div>
+            <div class="d-flex col-sm mx-auto border p-2"> <!-- crust container-->
+              <form class="d-block mx-auto" id="crustForm"> <!-- crust form -->
+                <input type="radio" name="crust" value='Plain' checked> Plain Crust<br>
+                <input type="radio" name="crust" value='Garlic'> Garlic Crust <br>
+                <input type="radio" name="crust" value='Cheese Stuffed'> Cheese Stuffed Crust <br>
+                <input type="radio" name="crust" value='Spicy'> Spicy Crust <br>
+                <input type="radio" name="crust" value='House Special'> House Special Crust
+              </form>
+            </div>
+            <div class="d-flex col-sm mx-auto border p-2"> <!-- sauce form container -->
+              <form class="d-block mx-auto" id="sauceForm"> <!-- sauce form -->
+                <input type="radio" name="sauce" value="Marinara" checked> Marinara Sauce <br>
+                <input type="radio" name="sauce" value="White"> White Sauce <br>
+                <input type="radio" name="sauce" value="Barbeque"> Barbeque Sauce <br>
+                <input type="radio" name="sauce" value="None"> No Sauce <br>  
+              </form>
+            </div>  
+          </div>
+          <div class="row"> <!-- selection menus row 2 -->
+              <div class="d-flex col-sm mx-auto border p-2"> <!-- cheese container-->
+                <form class="d-block mx-auto" id="cheeseForm"> <!-- cheese form -->
+                  <input type="radio" name="cheese" value='Regular' checked> Regular <br>
+                  <input type="radio" name="cheese" value='None'> No Cheese <br>
+                  <input type="radio" name="cheese" value='Extra'> Extra Cheese <br>          
+                </form>
+              </div>
+              <div class="d-flex col-sm mx-auto border p-2" id="meatForm"> <!-- meat menu container-->
+                <form class="d-block mx-auto"> <!-- meat form -->
+                  <input type="checkbox" name="meat" value="Pepperoni">Pepperoni<br>
+                  <input type="checkbox" name="meat" value="Sausage">Sausage<br>
+                  <input type="checkbox" name="meat" value="Canadian Bacon">Canadian Backon<br>
+                  <input type="checkbox" name="meat" value="Ground Beef">Ground Beef<br>
+                  <input type="checkbox" name="meat" value="Anchovy">Anchovy<br>
+                  <input type="checkbox" name="meat" value="Chicken">Chicken<br>
+                </form>
+              </div>
+              <div class="d-flex col-sm mx-auto border p-2"> <!-- veggie form container -->
+                <form class="d-block mx-auto" id="veggieForm"> <!-- veggie form -->
+                  <input type="checkbox" name="veggie" value="Tomatoes">Tomatoes<br>
+                  <input type="checkbox" name="veggie" value="Onions">Onions<br>
+                  <input type="checkbox" name="veggie" value="Olives">Olives<br>
+                  <input type="checkbox" name="veggie" value="Green Peppers">Green Peppers<br>
+                  <input type="checkbox" name="veggie" value="Mushrooms">Mushrooms<br>
+                  <input type="checkbox" name="veggie" value="Pineapple">Pineapple<br>
+                  <input type="checkbox" name="veggie" value="Spinach">Spinach<br>
+                  <input type="checkbox" name="veggie" value="Jalapeno">Jalapeno<br>
+                </form>
+              </div>
+          </div>
+          <div class="container-fluid d-flex justify-items-center pr-5 mt-5"> <!--Submit Button Area  -->
+              <button type="button" class="btn btn-primary mx-auto" onclick="pizzaPrice()" data-toggle="modal" data-target="#exampleModalCenter">
+                  Submit
+              </button>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"> <!-- Itemized Receipt Area -->
+          <div class="modal-dialog modal-dialog-centered" role="document"> <!-- makes the modal centered and small like a dialogue box -->
+            <div class="modal-content"> <!-- makes the background white -->
+              <div class="modal-header"> <!-- modal header -->
+                <h5 class="modal-title" id="exampleModalCenterTitle">Please Review Your Order</h5> <!-- modal title -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- puts close button in top right -->
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body"> <!-- seems to make the table a little narrower -->
+                <div class="container-fluid mx-auto"> <!-- seems to make the table a little narrower -->
+                  <table class="table table-striped mx-auto container-fluid">
+                    <thead> <!-- table head -->
+                      <tr>
+                      <th>Component</th>
+                      <th>Selection</th>
+                      <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody> <!-- table body -->
+                      <tr> <!-- size row -->
+                        <td>Size</td>
+                        <td id="sizeSelection"></td>
+                        <td id="sizePrice"></td>
+                      </tr>
+                      <tr> <!-- crust row --> 
+                        <td>Crust</td>
+                        <td id="crustSelection"></td>
+                        <td id="crustPrice"></td>
+                      </tr>
+                      <tr> <!-- sauce row --> 
+                        <td>Sauce</td>
+                        <td id="sauceselection"></td>
+                        <td id="saucePrice"></td>
+                      </tr>
+                      <tr> <!-- cheese row --> 
+                        <td>Cheese</td>
+                        <td id="cheeseSelection"></td>
+                        <td id="cheesePrice"></td>
+                      </tr>
+                      <tr> <!-- meats row--> 
+                        <td>Meats</td>
+                        <td id="meatSelection"></td>
+                        <td id="meatPrice"></td>
+                      </tr>
+                      <tr> <!-- veggies row--> 
+                        <td>Veggies</td>
+                        <td id="veggieSelection"></td>
+                        <td id="veggiePrice"></td>
+                      </tr>
+                      <tr class="table-success"> <!-- total row --> 
+                        <td>Total</td>
+                        <td></td>
+                        <td id="receiptTotal"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="submitOrder()">Submit Your Order</button>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script> //sets page height to height of browser page
+    var windowheight =window.innerHeight;
+    console.log(windowheight);
+    document.getElementById("outside-container").style.minHeight = windowheight;
+  </script>
+  <script> //itemized receipt script         
+    function getBaseSelection(){ // returns base size selections
+      var sizeMenu=document.forms[0];  //finds the size form
+      var n = 0; //sets placeholder var
+      for (n=0; n <sizeMenu.length; n++) { // as long as n is 0, and n is less than the length of the form, n increments
+        if (sizeMenu[n].checked) { //if the nth item in the size form is checked
+          var baseSelection = sizeMenu[n].value; //set the variable basePrice as the value of the nth item in the form
+        }
+      }
+      return baseSelection;
+    }    
+    function getCrustSelection(){ // returns crust selection
+      var crustMenu=document.forms[1];   //finds the crust form
+      var n = 0; //sets placeholder var
+      for (n=0; n <crustMenu.length; n++) { // as long as n is 0, and n is less than the length of the form, n increments
+        if (crustMenu[n].checked) { //if the nth item in the size form is checked
+          var crustSelection = crustMenu[n].value; //set the variable basePrice as the value of the nth item in the form
+        }
+      }
+      return crustSelection;
+    }
+    function getSauceSelection(){ //returns sauce selection
+      var sauceMenu=document.forms[2];   //finds the sauce form
+      var n = 0; //sets placeholder var
+      for (n=0; n <sauceMenu.length; n++) { // as long as n is 0, and n is less than the length of the form, n increments
+        if (sauceMenu[n].checked) { //if the nth item in the size form is checked
+          var sauceSelection = sauceMenu[n].value; //set the variable basePrice as the value of the nth item in the form
+        }
+      }
+      return sauceSelection;
+    }
+    function getCheeseSelection(){ //returns cheese selection
+      var cheeseMenu=document.forms[3];   //finds the cheese form
+      var n = 0; //sets placeholder var
+      for (n=0; n <cheeseMenu.length; n++) { // as long as n is 0, and n is less than the length of the form, n increments
+        if (cheeseMenu[n].checked) { //if the nth item in the size form is checked
+          var cheeseSelection = cheeseMenu[n].value; //set the variable cheeseSelection as the value of the nth item in the form
+        }
+      }
+      return cheeseSelection;
+    }
+    function getMeatSelections() { //returns meat selection
+      var meatMenu = document.forms[4];
+      var meatSelections = [];
+      var n = 0;
+      for (n=0; n <meatMenu.length; n++) {
+        if (meatMenu[n].checked) {
+          meatSelections.push(" "+meatMenu[n].value);
+        }
+      }
+      return meatSelections;
+    }
+    function getVeggieSelections() { //returns veggie selections
+      var veggieMenu = document.forms[5];
+      var veggieSelections = [];
+      var n = 0;
+      for (n=0; n <veggieMenu.length; n++) {
+        if (veggieMenu[n].checked) {
+          veggieSelections.push(" "+veggieMenu[n].value);
+        }
+      }
+      return veggieSelections;
+    }    
+    function getBasePrice() { //returns base price from size
+      var priceArray = [6,10,14,16]
+      var sizeMenu = document.forms[0];
+      var sizePrice;
+      var n = 0;
+      for (n=0; n<sizeMenu.length; n++) {
+        if (sizeMenu[n].checked) {
+          sizePrice = priceArray[n];
+        }
+      }
+      return sizePrice;
+    }
+    function getCrustPrice() { //calculates crust price
+      var crustArray = [0,0,3,0,0];
+      var crustMenu = document.forms[1];
+      var crustPrice;
+      var n=0;
+      for (n=0; n<crustMenu.length; n++) {
+        if (crustMenu[n].checked) {
+          crustPrice = crustArray[n];
+        }
+      }
+      return crustPrice;
+    }
+    function getCheesePrice() { //calculates cheese price 
+      var priceArray = [0,0,3]
+      var cheeseMenu = document.forms[3];
+      var cheesePrice;
+      var n = 0;
+      for (n=0; n<cheeseMenu.length; n++) {
+        if (cheeseMenu[n].checked) {
+          cheesePrice = priceArray[n];
+        }
+      }
+      return cheesePrice;
+    }
+    function getMeatPrice() { // calculates meat count and price
+      var meatMenu = document.forms[4];
+      var meatCount = -1;
+      var n = 0; //sets placeholder var
+      for (n=0; n <meatMenu.length; n++) { // as long as n is 0, and n is less than the length of the form, n increments
+      if (meatMenu[n].checked) { //if the nth item in the size form is checked
+        var meatCount= meatCount + 1;
+        }
+      } 
+      if (meatCount >= 1) {
+        return parseInt(meatCount);
+      }
+      else {
+        return 0;
+      }
+    }
+    function getVeggiePrice() { // calculates veggie count and price
+      var veggieMenu = document.forms[5];
+      var veggieCount = -1;
+      var n = 0; //sets placeholder var
+      for (n=0; n <veggieMenu.length; n++) { // as long as n is 0, and n is less than the length of the form, n increments
+      if (veggieMenu[n].checked) { //if the nth item in the size form is checked
+        var veggieCount= veggieCount + 1;
+        }
+      } 
+      if (veggieCount >= 1) {
+        return parseInt(veggieCount);
+      }
+      else {
+        return 0;
+      }
+    }
+    function getTotalPrice(){ //calculates total pizza price
+      return getBasePrice() + getCrustPrice() + getCheesePrice()+ getMeatPrice() + getVeggiePrice();
+    }
+    function pizzaPrice() { //when user clicks Submit button, this function will run to create and display the itemized receipt
+      //appends selections to itemized receipt
+      document.getElementById('sizeSelection').innerHTML=getBaseSelection();
+      document.getElementById('crustSelection').innerHTML=getCrustSelection();
+      document.getElementById('sauceselection').innerHTML=getSauceSelection();
+      document.getElementById('cheeseSelection').innerHTML=getCheeseSelection();
+      document.getElementById('meatSelection').innerHTML=getMeatSelections();
+      document.getElementById('veggieSelection').innerHTML=getVeggieSelections();
+      // appends prices to itemized receipt
+      document.getElementById('sizePrice').innerHTML="$"+getBasePrice();
+      document.getElementById('crustPrice').innerHTML="$"+getCrustPrice();
+      document.getElementById('saucePrice').innerHTML="Included";
+      document.getElementById('cheesePrice').innerHTML="$"+getCheesePrice();
+      document.getElementById('meatPrice').innerHTML="$"+getMeatPrice();
+      document.getElementById('veggiePrice').innerHTML="$"+getVeggiePrice();
+      //appends total to itemized receipt
+      document.getElementById('receiptTotal').innerHTML="$"+getTotalPrice();
+    }
+    function submitOrder() { //reloads the page when the user clicks the Submit Your Order button in the modal
+      location.reload();
+    }
+  </script>
+</body>
+</html>
